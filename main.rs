@@ -1,43 +1,18 @@
-use core::num;
-use std::{cmp::Ordering, io};// prelude
-use rand::Rng;//trait
-
 fn main() {
-    println!("guess the number!");
+    println!("Hello, world!");
 
-    let secret_number = rand::thread_rng().gen_range(1, 101);//i32 u32 i64
+    let mut x = 5;//可变
+    println!("The value of x is: {}", x);
+    //常量不可变，类型必须被标注，只能绑定常量表达式
+    //const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
-    //println!("The secert number is {}", secret_number);
-
-    loop {
-        println!("please input your guess.");
-        // println("please input your guess.");
-        //let foo = 1;
-        //let bar = foo;//immutable
-
-        //foo = 2; false
-        let mut guess = String::new();
-
-        io::stdin().read_line(&mut guess)//io::result ok, error
-            .expect("failed to read line");
-
-                //shadow
-        let guess: u32 = match guess.trim().parse() {
-              Ok(num) => num,
-              Err(_) => continue, 
-        };
-
-        println!("Your number is:{}", guess);
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("too small!"), //arm
-            Ordering::Greater => println!("too big!"),
-            Ordering::Equal => {
-                print!("you win!");
-                break;
-            }
-        }
-    }
-
-   
+    //shadowing
+    let y = 5;
+    let y = y + 1;
+    let y = y * 2;
+    println!("The value of y is: {}", y);
+    let spaces = "   ";
+    let spaces = spaces.len();
+    println!("The value of spaces is: {}", spaces);
+    
 }
