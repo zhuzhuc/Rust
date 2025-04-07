@@ -1,7 +1,9 @@
-fn main() {
+pub fn function() {
+    println!("This is some function from var.rs");
+
     println!("Hello, world!");
 
-    let mut x = 5;//可变
+    let mut x = 5; //可变
     println!("The value of x is: {}", x);
     //常量不可变，类型必须被标注，只能绑定常量表达式
     //const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
@@ -14,5 +16,4 @@ fn main() {
     let spaces = "   ";
     let spaces = spaces.len();
     println!("The value of spaces is: {}", spaces);
-    
 }
