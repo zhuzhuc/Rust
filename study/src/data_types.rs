@@ -68,6 +68,13 @@ pub fn function() {
     // 调用函数并返回元组
     let (x, y) = get_coordinates();
     println!("x: {}, y: {}", x, y);
+
+    println!("----------------------------------------");
+    five_func();
+    println!("----------------------------------------");
+    bool_func();
+    println!("----------------------------------------");
+    while_func();
     println!("----------------------------------------");
 }
 
@@ -79,4 +86,76 @@ fn add_numbers(a: i32, b: i32) -> i32 {
 // 函数例子：返回一个元组
 fn get_coordinates() -> (i32, i32) {
     (10, 20)
+}
+
+fn five(x: i32) -> i32 {
+    x + 5
+}
+fn five_func() {
+    let mut x = 0;
+    x = x + five(6);
+    println!("the value of x is: {}", x);
+}
+
+fn bool_func() {
+    let number = 3;
+    if number < 5 {
+        println!("condition is true");
+    } else {
+        println!("condition is false");
+    }
+
+    let num = 6;
+    if num % 4 == 0 {
+        println!("Number is divisible by 4");
+    } else if num % 3 == 0 {
+        println!("Number is divisible by 3");
+    } else if num % 2 == 0 {
+        println!("Number is divisible by 2");
+    } else {
+        println!("Number is not divisible by 4, 3 or 2");
+    }
+
+    let conditions = true;
+
+    let nummm = if conditions { 5 } else { 6 };
+    println!("the value of nummm is: {}", nummm);
+}
+
+fn while_func() {
+    let mut counter = 0;
+    let res = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("the result is: {}", res);
+    println!("----------------------------------------");
+    let mut nn = 3;
+    while nn != 0 {
+        println!("{}!", nn);
+        nn = nn - 1;
+    }
+    println!("LIFTOFF!!!");
+
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+        index = index + 1;
+    }
+
+    println!("----------------------------------------");
+
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+
+    println!("----------------------------------------");
+    for nm in (1..4).rev() {
+        println!("{}", nm);
+    }
+    println!("LIFTOFF");
 }
