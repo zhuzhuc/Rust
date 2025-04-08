@@ -1,1 +1,1 @@
-/Users/Apple/Desktop/Some/Rust/study/target/debug/study: /Users/Apple/Desktop/Some/Rust/study/src/data_types.rs /Users/Apple/Desktop/Some/Rust/study/src/main.rs /Users/Apple/Desktop/Some/Rust/study/src/var.rs
+/Users/Apple/Desktop/Some/Rust/study/target/debug/study: /Users/Apple/Desktop/Some/Rust/study/src/data_types.rs /Users/Apple/Desktop/Some/Rust/study/src/functions.rs /Users/Apple/Desktop/Some/Rust/study/src/main.rs /Users/Apple/Desktop/Some/Rust/study/src/var.rs

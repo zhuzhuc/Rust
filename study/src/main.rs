@@ -1,4 +1,6 @@
 mod data_types;
+
+mod functions;
 mod var;
 fn main() {
     println!("Hello, world!");
@@ -19,4 +21,5 @@ fn main() {
 
     data_types::function();
     var::function();
+    functions::function();
 }
