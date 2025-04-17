@@ -19,6 +19,19 @@ pub fn function() {
     println!("------------------------------------");
     yyy();
     xxx();
+    println!("-----------------------------------------");
+    println!("修复所有权常见错误");
+    let value = return_a_string();
+    println!("The value is: {}", value);
+    println!("-----------------------------------------");
+    println!("权限不够问题");
+    let name = vec![String::from("zzc"), String::from("zzc")];
+    let first = &name[0];
+    let full = stringify_name_with_title(&name);
+    print!("{}", first);
+    println!("{:?}", name);
+    println!("{}", full);
+    
 }
 
 fn greet(g1: String, g2: String) -> (String, String) {
@@ -54,4 +67,20 @@ fn xxx() {
 
     let num = &v[2]; // 现在才借用，不冲突
     println!("Third element is {}", *num);
+}
+fn return_a_string() -> &'static str{
+    "Hello zzc"
+}
+fn stringify_name_with_title(name: &Vec<String>) -> String {
+    //cannot borrow `*name` as mutable, as it is behind a `&` reference
+    //clone浪费内存
+    // let mut name = name;
+    // let mut full = name.join(" ");
+    // full.push_str(", zzc")
+    // full;
+    let mut name_clone = name.clone();
+    name_clone.push(String::from("zzc"));
+    
+    let full = name_clone.join(" ");
+    full
 }
