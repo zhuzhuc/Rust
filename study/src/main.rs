@@ -4,8 +4,18 @@ mod borrow;
 mod functions;
 mod su;
 mod var;
+mod fixed;
 fn main() {
     println!("Hello, world!");
+    let zzc_art = r#"
+    ______   ______   ______ 
+   |___  /  |___  /  |___  / 
+      / /      / /     / /  
+     / /      / /     / /   
+    / /__    / /__   / /__  
+   /_____|  /_____| /_____| 
+   "#;
+       println!("{}", zzc_art);
 
     let mut x = 5; //可变
     println!("The value of x is: {}", x);
@@ -26,4 +36,5 @@ fn main() {
     functions::function();
     su::function();
     borrow::function();
+    fixed::function();
 }
