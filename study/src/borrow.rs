@@ -31,7 +31,6 @@ pub fn function() {
     print!("{}", first);
     println!("{:?}", name);
     println!("{}", full);
-    
 }
 
 fn greet(g1: String, g2: String) -> (String, String) {
@@ -68,7 +67,7 @@ fn xxx() {
     let num = &v[2]; // 现在才借用，不冲突
     println!("Third element is {}", *num);
 }
-fn return_a_string() -> &'static str{
+fn return_a_string() -> &'static str {
     "Hello zzc"
 }
 fn stringify_name_with_title(name: &Vec<String>) -> String {
@@ -80,7 +79,7 @@ fn stringify_name_with_title(name: &Vec<String>) -> String {
     // full;
     let mut name_clone = name.clone();
     name_clone.push(String::from("zzc"));
-    
+
     let full = name_clone.join(" ");
     full
 }
@@ -105,7 +104,7 @@ fn stringify_name_with_title(name: &Vec<String>) -> String {
 //一个 Box<Box<Box<Box<Vec<String>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
 //一个 &Box<Box<Box<Box<Vec<String>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 &mut Box<Box<Box<Box<Vec<String>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
-//一个 Box<Box<Box<Box<Box<Vec<String>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制 
+//一个 Box<Box<Box<Box<Box<Vec<String>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
 //一个 &Box<Box<Box<Box<Box<Vec<String>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 &mut Box<Box<Box<Box<Box<Vec<String>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 Box<Box<Box<Box<Box<Box<Vec<String>>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
@@ -119,12 +118,12 @@ fn stringify_name_with_title(name: &Vec<String>) -> String {
 //一个 &mut Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
 //一个 &Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
-//一个 &mut Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制           
-//一个 Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制      
+//一个 &mut Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
+//一个 Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
 //一个 &Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 &mut Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
-//一个 &Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制       
+//一个 &Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 &mut Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制
 //一个 Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 拥有堆数据， 因此不能在不移动的情况下被复制
 //一个 &Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Box<Vec<String>>>>>>>>> 不拥有堆数据， 因此可以在不移动的情况下被复制

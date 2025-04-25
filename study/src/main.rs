@@ -1,10 +1,11 @@
-mod data_types;
-
+mod Slice;
+mod Struct;
 mod borrow;
+mod data_types;
+mod fixed;
 mod functions;
 mod su;
 mod var;
-mod fixed;
 fn main() {
     println!("Hello, world!");
     let zzc_art = r#"
@@ -15,7 +16,7 @@ fn main() {
     / /__    / /__   / /__  
    /_____|  /_____| /_____| 
    "#;
-       println!("{}", zzc_art);
+    println!("{}", zzc_art);
 
     let mut x = 5; //可变
     println!("The value of x is: {}", x);
@@ -37,4 +38,6 @@ fn main() {
     su::function();
     borrow::function();
     fixed::function();
+    Slice::function();
+    Struct::function();
 }
