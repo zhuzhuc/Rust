@@ -1,20 +1,23 @@
 mod Slice;
 mod Struct;
+mod Enum;
 mod borrow;
 mod data_types;
 mod fixed;
 mod functions;
 mod su;
 mod var;
+mod operation;
 fn main() {
     println!("Hello, world!");
     let zzc_art = r#"
-    ______   ______   ______ 
-   |___  /  |___  /  |___  / 
-      / /      / /     / /  
-     / /      / /     / /   
-    / /__    / /__   / /__  
-   /_____|  /_____| /_____| 
+ ________  ________  ________     
+|\_____  \|\_____  \|\   ____\    
+ \|___/  /|\|___/  /\ \  \___|    
+     /  / /    /  / /\ \  \       
+    /  /_/__  /  /_/__\ \  \____  
+   |\________\\________\ \_______\
+    \|_______|\|_______|\|_______|                   
    "#;
     println!("{}", zzc_art);
 
@@ -40,4 +43,5 @@ fn main() {
     fixed::function();
     Slice::function();
     Struct::function();
+    Enum::function();
 }
